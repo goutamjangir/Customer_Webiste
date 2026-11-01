@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
+  <rect width="300" height="300" fill="#FAF7F1" rx="16"/>
+  <!-- QR Outer Corner 1 -->
+  <rect x="25" y="25" width="70" height="70" fill="#34251F" rx="8"/>
+  <rect x="35" y="35" width="50" height="50" fill="#FAF7F1" rx="4"/>
+  <rect x="45" y="45" width="30" height="30" fill="#B58A55" rx="3"/>
+
+  <!-- QR Outer Corner 2 -->
+  <rect x="205" y="25" width="70" height="70" fill="#34251F" rx="8"/>
+  <rect x="215" y="35" width="50" height="50" fill="#FAF7F1" rx="4"/>
+  <rect x="225" y="45" width="30" height="30" fill="#B58A55" rx="3"/>
+
+  <!-- QR Outer Corner 3 -->
+  <rect x="25" y="205" width="70" height="70" fill="#34251F" rx="8"/>
+  <rect x="35" y="215" width="50" height="50" fill="#FAF7F1" rx="4"/>
+  <rect x="45" y="225" width="30" height="30" fill="#B58A55" rx="3"/>
+
+  <!-- Simulated Data Matrix Pixels -->
+  <g fill="#34251F">
+    <rect x="115" y="35" width="16" height="16"/>
+    <rect x="150" y="35" width="16" height="16"/>
+    <rect x="175" y="35" width="16" height="16"/>
+    <rect x="115" y="65" width="16" height="16"/>
+    <rect x="140" y="75" width="16" height="16"/>
+    
+    <rect x="35" y="115" width="16" height="16"/>
+    <rect x="70" y="125" width="16" height="16"/>
+    <rect x="45" y="155" width="16" height="16"/>
+    <rect x="75" y="170" width="16" height="16"/>
+
+    <rect x="115" y="115" width="16" height="16"/>
+    <rect x="175" y="115" width="16" height="16"/>
+    <rect x="135" y="145" width="16" height="16"/>
+    <rect x="160" y="165" width="16" height="16"/>
+
+    <rect x="215" y="120" width="16" height="16"/>
+    <rect x="250" y="135" width="16" height="16"/>
+    <rect x="225" y="165" width="16" height="16"/>
+
+    <rect x="115" y="215" width="16" height="16"/>
+    <rect x="145" y="235" width="16" height="16"/>
+    <rect x="175" y="215" width="16" height="16"/>
+    <rect x="125" y="260" width="16" height="16"/>
+    <rect x="160" y="255" width="16" height="16"/>
+
+    <rect x="215" y="215" width="16" height="16"/>
+    <rect x="245" y="240" width="16" height="16"/>
+    <rect x="220" y="260" width="16" height="16"/>
+    <rect x="255" y="260" width="16" height="16"/>
+  </g>
+
+  <!-- Center Badge with Menu3D Logo -->
+  <circle cx="150" cy="150" r="34" fill="#34251F" stroke="#B58A55" stroke-width="3"/>
+  <text x="150" y="156" font-family="'Georgia', serif" font-size="14" font-weight="bold" fill="#FAF7F1" text-anchor="middle">M<tspan fill="#B58A55">3D</tspan></text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <!-- Chef Hat Icon -->
+  <g transform="translate(10, 8)">
+    <path d="M 22 4 C 18 4 15 7 15 11 C 11 11 8 15 8 19 C 8 22.5 10 25.5 13 27 C 12 28.5 12 30 12 32 L 32 32 C 32 30 32 28.5 31 27 C 34 25.5 36 22.5 36 19 C 36 15 33 11 29 11 C 29 7 26 4 22 4 Z" fill="#B58A55" opacity="0.95"/>
+    <rect x="13" y="34" width="18" height="4" rx="2" fill="#B58A55"/>
+    <circle cx="22" cy="18" r="2" fill="#FAF7F1"/>
+  </g>
+  <!-- Text: Menu3D -->
+  <text x="60" y="32" font-family="'Georgia', serif" font-size="24" font-weight="bold" fill="#FAF7F1" letter-spacing="1">Menu<tspan fill="#B58A55">3D</tspan></text>
+  <!-- Tagline: See • Choose • Enjoy -->
+  <text x="62" y="46" font-family="'Inter', sans-serif" font-size="9" font-weight="500" fill="#EDE1D0" letter-spacing="1.5" opacity="0.85">SEE • CHOOSE • ENJOY</text>
+</svg>
