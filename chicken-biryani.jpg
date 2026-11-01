@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad_chicken-biryani_jpg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DDA15E" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#BC6C25" stop-opacity="0.95"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#FAF7F1" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#110905" stop-opacity="0.6"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="400" fill="#221612"/>
+  <rect width="600" height="400" fill="url(#grad_chicken-biryani_jpg)" opacity="0.6"/>
+  <circle cx="300" cy="180" r="130" fill="url(#glow)"/>
+  <circle cx="300" cy="180" r="105" fill="#1B120E" stroke="#B58A55" stroke-width="4" opacity="0.9"/>
+  <circle cx="300" cy="180" r="90" fill="#DDA15E" opacity="0.75"/>
+  <text x="300" y="195" font-size="64" text-anchor="middle">🍚</text>
+  <rect x="0" y="300" width="600" height="100" fill="#180F0B" opacity="0.85"/>
+  <text x="300" y="345" font-family="'Georgia', serif" font-size="24" font-weight="bold" fill="#FAF7F1" text-anchor="middle">Dum Biryani</text>
+  <text x="300" y="372" font-family="'Inter', sans-serif" font-size="14" fill="#B58A55" text-anchor="middle" letter-spacing="1">AGED SAFFRON BASMATI</text>
+</svg>
