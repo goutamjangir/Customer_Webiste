@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Dish Details &amp; 3D Food View — Spice &amp; Soul</title>
+  <meta name="description" content="Inspect this dish in 360 interactive 3D, view serving portions, fresh ingredients, and allergen information.">
+  <meta name="theme-color" content="#34251F">
+  
+  <link rel="icon" type="image/svg+xml" href="./public/assets/images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="./src/css/base.css">
+  <link rel="stylesheet" href="./src/css/layout.css">
+  <link rel="stylesheet" href="./src/css/components.css">
+  <link rel="stylesheet" href="./src/css/home.css">
+</head>
+<body>
+  <!-- Header Mount -->
+  <div id="headerMount"></div>
+
+  <main>
+    <!-- Dish Detail Mount -->
+    <div id="dishMount"></div>
+
+    <!-- Related Recommendations Mount -->
+    <div id="relatedMount"></div>
+  </main>
+
+  <!-- Footer Mount -->
+  <div id="footerMount"></div>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <div id="mobileNavMount"></div>
+
+  <!-- Page Controller Script -->
+  <script type="module" src="./src/js/pages/dish.js"></script>
+</body>
+</html>

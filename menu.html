@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Complete Digital Menu — Spice &amp; Soul | 3D Food Experience</title>
+  <meta name="description" content="Browse our authentic North Indian delicacies, clay tandoor appetisers, rich handi curries, and interactive 3D food models.">
+  <meta name="theme-color" content="#34251F">
+  
+  <link rel="icon" type="image/svg+xml" href="./public/assets/images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="./src/css/base.css">
+  <link rel="stylesheet" href="./src/css/layout.css">
+  <link rel="stylesheet" href="./src/css/components.css">
+  <link rel="stylesheet" href="./src/css/menu.css">
+</head>
+<body>
+  <!-- Header Mount -->
+  <div id="headerMount"></div>
+
+  <main>
+    <!-- Menu Page Header -->
+    <section class="menu-page-header">
+      <div class="container">
+        <h1>Our Digital Menu</h1>
+        <p>Fresh ingredients • Hand-ground spices • Interactive 3D presentation</p>
+      </div>
+    </section>
+
+    <!-- Controls Bar: Search, Dietary Filters, 3D Toggle, Sort -->
+    <section class="menu-controls-section">
+      <div class="container menu-controls-grid">
+        <!-- Search -->
+        <div class="menu-search-box">
+          <span class="menu-search-icon" aria-hidden="true">🔍</span>
+          <input 
+            type="text" 
+            id="menuSearchInput" 
+            class="menu-search-input" 
+            placeholder="Search dishes or ingredients (e.g. Butter Chicken, Paneer)..." 
+            autocomplete="off"
+            aria-label="Search menu"
+          />
+          <button type="button" id="menuSearchClear" class="menu-search-clear" aria-label="Clear search">&times;</button>
+        </div>
+
+        <!-- Filter Chips Row -->
+        <div class="filter-chips-row">
+          <button type="button" class="filter-chip active" data-dietary="all">All</button>
+          <button type="button" class="filter-chip" data-dietary="veg">
+            <span class="dietary-badge veg" style="width: 14px; height: 14px;"></span> Veg
+          </button>
+          <button type="button" class="filter-chip" data-dietary="non-veg">
+            <span class="dietary-badge non-veg" style="width: 14px; height: 14px;"></span> Non-Veg
+          </button>
+          <button type="button" class="filter-chip filter-chip-3d" id="filter3DChip">
+            <span aria-hidden="true">🧊</span> 3D Only
+          </button>
+
+          <!-- Sort Select -->
+          <select id="menuSortSelect" class="sort-select" aria-label="Sort dishes">
+            <option value="default">Sort: Recommended</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name">Name (A-Z)</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Tabs Navigation -->
+    <nav class="category-tabs-section" aria-label="Menu categories">
+      <div class="container">
+        <ul class="category-tabs-list" id="categoryTabsList">
+          <!-- Populated dynamically via menuService -->
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Catalog Dishes Grid -->
+    <section class="catalog-content-section">
+      <div class="container">
+        <div class="catalog-header-info">
+          <h2 class="catalog-header-title" id="catalogCategoryTitle">All Dishes</h2>
+          <span class="catalog-dish-count" id="catalogDishCount">Loading dishes...</span>
+        </div>
+
+        <div class="catalog-grid" id="catalogGrid">
+          <!-- Populated dynamically via DishCard component -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Mount -->
+  <div id="footerMount"></div>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <div id="mobileNavMount"></div>
+
+  <!-- Page Controller Script -->
+  <script type="module" src="./src/js/pages/menu.js"></script>
+</body>
+</html>
