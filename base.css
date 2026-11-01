@@ -1,0 +1,176 @@
+/**
+ * Menu3D - Base Styles & Design Tokens
+ * Theme: Luxury Dining (PRD Section 15)
+ */
+
+:root {
+  /* Brand Palette */
+  --color-primary: #34251F;        /* Dark Chocolate */
+  --color-primary-dark: #221612;
+  --color-primary-light: #4A352D;
+  --color-bg: #EDE1D0;             /* Beige Background */
+  --color-bg-alt: #E3D4C0;
+  --color-accent: #B58A55;         /* Muted Gold */
+  --color-accent-hover: #9E7442;
+  --color-accent-light: #F4E8D8;
+  --color-surface: #FAF7F1;        /* Warm White */
+  --color-surface-elevated: #FFFFFF;
+  --color-surface-dark: #2A1D17;
+
+  /* Typography Colors */
+  --color-text-main: #2A1E19;
+  --color-text-muted: #7A6B63;
+  --color-text-light: #FAF7F1;
+  --color-text-light-muted: #D5C7B8;
+
+  /* Functional & Dietary Colors */
+  --color-veg: #2E7D32;            /* Green Veg Dot */
+  --color-veg-bg: #E8F5E9;
+  --color-non-veg: #D32F2F;        /* Red Non-Veg Dot */
+  --color-non-veg-bg: #FFEBEE;
+  --color-border: #D8C7B5;
+  --color-border-dark: #4A362D;
+  --color-success: #2E7D32;
+  --color-warning: #ED6C02;
+  --color-error: #D32F2F;
+
+  /* Typography Fonts */
+  --font-heading: 'Georgia', 'Playfair Display', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Layout Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  /* Border Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-subtle: 0 4px 16px rgba(52, 37, 31, 0.06);
+  --shadow-medium: 0 8px 24px rgba(52, 37, 31, 0.12);
+  --shadow-elevated: 0 16px 40px rgba(52, 37, 31, 0.20);
+  --shadow-glow: 0 0 20px rgba(181, 138, 85, 0.35);
+
+  /* Container */
+  --container-max-width: 1240px;
+  --header-height: 72px;
+  --mobile-nav-height: 64px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Dark Mode Variant (PRD Screen 18) */
+[data-theme="dark"] {
+  --color-bg: #1A120E;
+  --color-bg-alt: #241A14;
+  --color-surface: #261A14;
+  --color-surface-elevated: #31221B;
+  --color-text-main: #FAF7F1;
+  --color-text-muted: #B8A89C;
+  --color-border: #422F26;
+  --shadow-subtle: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-elevated: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* CSS Reset & Defaults */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-main);
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-text-main);
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Common Layout Helpers */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-md);
+  padding-right: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
+  }
+}
+
+.text-gold {
+  color: var(--color-accent) !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

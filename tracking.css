@@ -1,0 +1,207 @@
+/**
+ * Menu3D - Live Order Tracking Styles
+ * Matching Screen 11
+ */
+
+.tracking-page-section {
+  padding: var(--spacing-2xl) 0 var(--spacing-3xl);
+  min-height: 75vh;
+}
+
+.tracking-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-2xl);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .tracking-grid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+.tracking-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-medium);
+  margin-bottom: var(--spacing-lg);
+}
+
+.tracking-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--spacing-md);
+}
+
+.tracking-order-id {
+  font-family: monospace;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+/* Vertical Timeline */
+.timeline {
+  position: relative;
+  padding-left: 36px;
+  margin: var(--spacing-xl) 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 14px;
+  width: 3px;
+  background-color: var(--color-border);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-node {
+  position: absolute;
+  left: -36px;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.timeline-item.completed .timeline-node {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+  color: #FFFFFF;
+}
+
+.timeline-item.active .timeline-node {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-primary-dark);
+  box-shadow: 0 0 12px var(--color-accent);
+  animation: pulseNode 2s infinite;
+}
+
+@keyframes pulseNode {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.timeline-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 2px;
+}
+
+.timeline-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* Map Simulation Box */
+.map-simulation-box {
+  background: radial-gradient(circle at 60% 40%, rgba(181, 138, 85, 0.15), rgba(34, 22, 18, 0.95)), #1E130E;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-xl);
+  min-height: 240px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-subtle);
+  color: #FFFFFF;
+}
+
+.map-route-graphic {
+  position: absolute;
+  top: 45%;
+  left: 10%;
+  right: 15%;
+  height: 4px;
+  background: repeating-linear-gradient(90deg, var(--color-accent), var(--color-accent) 12px, transparent 12px, transparent 20px);
+}
+
+.map-rider-icon {
+  position: absolute;
+  top: calc(45% - 18px);
+  left: 45%;
+  font-size: 2rem;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+  animation: bounceRider 1.5s infinite ease-in-out;
+}
+
+@keyframes bounceRider {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Delivery Partner Card */
+.driver-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.driver-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.driver-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgba(181, 138, 85, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  border: 2px solid var(--color-accent);
+}
+
+/* Status Advancement Simulation Toolbar */
+.demo-simulator-toolbar {
+  background-color: rgba(181, 138, 85, 0.12);
+  border: 1.5px dashed var(--color-accent);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.88rem;
+}
